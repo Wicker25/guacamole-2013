@@ -1,0 +1,32 @@
+= Guacamole =
+
+Quest'applicazione è un progetto d'esame le cui specifiche erano le seguenti.
+
+Le tecnologie che si possono adoperare nella realizzazione del servizio sono:
+
+	* HTML 4.01
+	* CSS 2.1
+	* JavaScript 1.3 con DOM Level 2
+	* PHP 5.1
+	* MySQL 5
+
+Il progetto deve potersi eseguire correttamente i browser:
+
+	* Mozilla FireFox 8.x
+	* Microsoft Internet Explorer 8-9.x
+
+I tipi di documento accettati sono HTML strict e frameset. Il tipo HTML transitional
+è ammesso solo in casi particolari (es. dove si adoperano iframe o si usa l’attributo
+target): in ogni caso la validazione tentata in sede di esame sarà con il tipo
+HTML 4.01 strict, per verificare che il numero di tag deprecated sia solo il minimo necessario.
+
+Attenzione: è necessario abolire anche i warning generati dal validatore CSS o, in alternativa,
+giustificare con un commento la loro presenza.
+
+È vietato l’uso di proprietà non standardizzate quali innerHTML e simili, tranne in casi concordati.
+
+
+= ATTENZIONE =
+Questo software è distribuito al pubblico con unico fine didattico, non usatelo in applicazioni reali!
+Non sono stati inseriti accorgimenti che prevengano gli attacchi di tipo XSRF e non è presente
+un vero sistema di amministrazione.

@@ -1,0 +1,484 @@
+/*
+    Title --- style.css
+
+    Copyright (C) 2013 Giacomo Trudu - wicker25[at]gmail[dot]com
+
+    This file is part of Guacamole.
+
+    Guacamole is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation version 3 of the License.
+
+    Guacamole is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with Guacamole. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+
+/** ====== Reset dello stile ====== **/
+
+body, div,
+dl, dt, dd,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+pre, code, blockquote,
+form, fieldset, legend, input, textarea,
+table, th, td {
+
+	font: 12px sans-serif;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+p {
+
+	line-height: 1.5em;
+	margin: 0.3em;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+
+	background: #ffc;
+	border: 1px solid #291;
+}
+
+input[type="text"],
+input[type="password"] {
+
+	height: 1.4em;
+}
+
+input[disabled],
+textarea[disabled] {
+
+	background: #dda;
+}
+
+input, textarea {
+
+	padding: 0.1em;
+	border: 1px solid black;
+}
+
+input[type="text"].invalid,
+input[type="password"].invalid,
+textarea.invalid {
+
+	border: 1px solid #d00;
+	background: #ffeeee;
+}
+
+/** ====== Elementi della GUI ====== **/
+
+.window {
+
+	float: left;
+	overflow: hidden;
+	border: 1px solid black;
+	background: #9e5 url('../css/window.gif') repeat-x;
+}
+
+.content {
+
+	float: left;
+	padding: 0.5em;
+}
+
+.widget {
+
+	float: left;
+	border: 1px solid #5a1;
+	background: #efa url('../css/widget.gif') repeat-x;
+}
+
+.dialog {
+
+	overflow: hidden;
+	position: absolute;
+	z-index: 1000;
+}
+
+.dialog .action {
+
+	cursor: pointer;
+	position: absolute;
+	top: 1px;
+	right: 1px;
+}
+
+.dialog label {
+
+	float: left;
+	width: 100%;
+}
+
+.dialog input[type="text"],
+.dialog input[type="password"] {
+
+	float: left;
+	width: 12.6em;
+	margin: 0.3em 0;
+	background: #efa url('../css/input.gif') repeat-x;
+}
+
+.dialog input[type="button"],
+.dialog input[type="submit"] {
+
+	float: right;
+	margin: 0.3em;
+	padding: 0 0.5em;
+	border: 1px solid #880;
+	background: #fffaaa;
+}
+
+.dialog input[type="button"]:hover,
+.dialog input[type="submit"]:hover {
+
+	background: #fff888;
+}
+
+.dialog input[type="text"].invalid,
+.dialog input[type="password"].invalid {
+
+	background: #ffd4c8 url('../css/invalid-input.gif') repeat-x;
+}
+
+.menu span {
+
+	display: block;
+	cursor: pointer;
+}
+
+.menu span:hover { background: #cf6; }
+
+.icon {
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;
+}
+
+/* Icone */
+.ico-idle			{ background-image: url('../icons/idle.png');			}
+.ico-news			{ background-image: url('../icons/news.gif');			}
+.ico-signin			{ background-image: url('../icons/signin.png');			}
+.ico-help			{ background-image: url('../icons/help.png');			}
+.ico-add			{ background-image: url('../icons/add.png');			}
+.ico-close			{ background-image: url('../icons/close.png');			}
+
+.ico-bold			{ background-image: url('../icons/bold.png');			}
+.ico-italic			{ background-image: url('../icons/italic.png');			}
+.ico-underline		{ background-image: url('../icons/underline.png');		}
+.ico-strike			{ background-image: url('../icons/strike.png');			}
+
+.ico-smile			{ background-image: url('../emoticons/smile.gif');		}
+.ico-sad			{ background-image: url('../emoticons/sad.gif');		}
+.ico-wink			{ background-image: url('../emoticons/wink.gif');		}
+.ico-neutral		{ background-image: url('../emoticons/neutral.gif');	}
+.ico-cheesygrin		{ background-image: url('../emoticons/cheesygrin.gif');	}
+.ico-razz			{ background-image: url('../emoticons/razz.gif');		}
+.ico-surprised		{ background-image: url('../emoticons/surprised.gif');	}
+.ico-cry			{ background-image: url('../emoticons/cry.gif');		}
+.ico-confused		{ background-image: url('../emoticons/confused.gif');	}
+.ico-mad			{ background-image: url('../emoticons/mad.gif');		}
+.ico-cool			{ background-image: url('../emoticons/cool.gif');		}
+.ico-lol			{ background-image: url('../emoticons/lol.gif');		}
+.ico-eek			{ background-image: url('../emoticons/eek.gif');		}
+.ico-evil			{ background-image: url('../emoticons/evil.gif');		}
+.ico-redface		{ background-image: url('../emoticons/redface.gif');	}
+.ico-rolleyes		{ background-image: url('../emoticons/rolleyes.gif');	}
+.ico-twisted		{ background-image: url('../emoticons/sad.gif');		}
+
+/* Bbcode */
+.bbcode-bold		{ font-weight: bold; }
+.bbcode-italic		{ font-style: italic; }
+.bbcode-underline	{ text-decoration: underline; }
+.bbcode-strike		{ text-decoration: line-through; }
+
+/* Collegamento ad un canale */
+.channel-link {
+
+	cursor: pointer;
+	color: #f00;
+	font-style: italic;
+}
+
+.channel-link:hover { color: #f90; }
+
+
+/** ====== Finestra principale ====== **/
+
+#main {
+
+	width: 45em;
+	margin: 0 auto;
+}
+
+/** ====== Barra delle schede ====== **/
+
+#tabs {
+
+	float: left;
+	overflow: hidden;
+	min-height: 1.8em;
+	margin-bottom: 0.4em;
+}
+
+/* Contenitore fisso delle schede */
+#tabs > div {
+
+	float: left;
+	width: 38em;
+}
+
+/* Pulsanti delle azioni */
+#tabs > a {
+
+	float: right;
+	cursor: pointer;
+	margin-left: 0.6em;
+}
+
+/* Scheda */
+#tabs > div > div {
+
+	float: left;
+	cursor: pointer;
+	margin: 0.1em;
+	margin-right: 0.3em;
+	padding: 0 0.2em;
+	border: 1px solid #aa0;
+	background: #ffa;
+}
+
+/* Scheda selezionata */
+#tabs > div > div:hover {
+
+	background: #ff0;
+}
+
+/* Scheda in uso */
+#tabs > div > .selected,
+#tabs > div > .selected:hover {
+
+	background: #fc0;
+}
+
+/* Nome della scheda */
+#tabs > div > div > span {
+
+	float: left;
+}
+
+/* Pulsanti della scheda */
+#tabs > div > div > a {
+
+	float: left;
+}
+
+/*
+	Quando la scheda è selezionata, nascondo l'icona di stato
+	e mostro i pulsanti delle azioni. Viceversa quando la scheda
+	non è selezionata.
+*/
+#tabs > div > div .action,
+#tabs > div > div:hover .status {
+
+	display: none;
+}
+
+#tabs > div > div:hover .action,
+#tabs > div > div .status {
+
+	display: block;
+}
+
+
+/** ====== Contenitore dei messaggi ====== **/
+
+#history {
+
+	width: 34em;
+	height: 20em;
+	position: relative;
+}
+
+/* Contenitore dei messaggi del canale */
+#history > div {
+
+	overflow: auto;
+	padding: 0.3em;
+}
+
+/* Messaggio del canale */
+#history > div > div {
+
+	line-height: 1.4em;
+	margin-bottom: 0.4em;
+}
+
+/* Informazioni sul messaggio */
+#history > div > div > div {
+
+	margin: 0.2em 0;
+	padding: 0.3em 0.5em;
+	background: #cf6;
+	border: 1px solid #be5;
+}
+
+/* Autore del messaggio */
+#history .author {
+
+	font-weight: bold;
+}
+
+/* Data del messaggio */
+#history .time {
+
+	float: right;
+	font-style: italic;
+}
+
+
+/** ====== Lista degli utenti ====== **/
+
+#users {
+
+	float: right;
+	height: 20em;
+	text-align: right;
+}
+
+/* Contenitore degli utenti del canale */
+#users > div {
+
+	overflow: auto;
+	padding: 0.3em;
+}
+
+/** ====== Barra degli strumenti ====== **/
+
+#toolbar {
+
+	float: left;
+	overflow: hidden;
+	height: 1.6em;
+	vertical-align: middle;
+	margin: 0.3em 0;
+}
+
+/* Pulsanti delle azioni */
+#toolbar > a {
+
+	float: left;
+	cursor: pointer;
+	margin: auto 0.2em;
+	border: 1px dotted transparent;
+}
+
+/* Pulsanti selezionati */
+#toolbar > a:hover {
+
+	border-color: #666;
+}
+
+
+/** ====== Casella di inserimento ====== **/
+
+#entry {
+
+	height: 6em;
+	padding: 0.2em;
+}
+
+/* Casella vuota */
+#entry.empty { color: gray; }
+
+/* Casella disabilitata */
+#entry[disabled] { text-indent: -1000px; }
+
+
+/** ======== Barra di stato ======== **/
+
+#statusbar {
+
+	float: left;
+	height: 1.2em;
+	margin-top: 0.5em;
+	background: #8d4;
+}
+
+#statusbar > span {
+
+	float: left;
+	color: #350;
+	font-size: 0.8em;
+	padding: 0.2em;
+}
+
+
+/** ====== Dimensioni derivate ====== **/
+
+#tabs,
+#toolbar,
+#statusbar {
+
+	/*
+		[#main]                45em  -
+		[.content]        2 x 0.5em  -
+		-------------------------------
+		                     44em
+	*/
+
+	width: 44em;
+}
+
+#entry {
+
+	/*
+		[#main]             45em  -
+		[.content]     2 x 0.5em  -
+		[padding]      2 x 0.2em  =
+		---------------------------
+		                  43.6em
+	*/
+
+	width: 43.4em;
+}
+
+#users {
+
+	/*
+		[#main]             45em  -
+		[#history]          34em  -
+		[space]              1em  -
+		[.content]     2 x 0.5em  -
+		---------------------------
+		                    9em
+	*/
+
+	width: 9em;
+}
+
+#history > div,
+#users > div {
+
+	/*
+		[#history/#user]        20em  -
+		[padding]          0.3em x 2  -
+		-------------------------------
+		                      19.4em
+	*/
+
+	height: 19.4em;
+}
+
+

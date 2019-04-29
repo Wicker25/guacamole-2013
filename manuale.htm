@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+		<title>Guacamole - Manuale</title>
+
+		<style type="text/css">
+
+			h2 a {
+
+				color: black;
+				font-size: 0.8em;
+				text-decoration: none;
+			}
+
+			.main {
+
+				width: 50em;
+				text-align: justify;
+				margin: 0 auto;
+			}
+
+			.nowrap { white-space: nowrap; }
+
+			.example { text-align: center; }
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="main">
+
+			<h1>Guacamole - Manuale utente</h1>
+
+			<p class="example">
+				<img src="doc/example.jpg" alt="schermata d'esempio">
+			</p>
+
+			<p>
+				<span style="font-weight: bold;">Guacamole</span> &egrave; una chat AJAX multicanale.
+				Si tratta di un'applicazione client-server in cui il client (realizzato in <em>JavaScript</em>) effettua periodicamente
+				delle richieste al server (<em>PHP</em>-<em>SQL</em>) per aggiornare i contenuti e lo stato della chat.
+			</p>
+
+			<p>
+				Un canale (o &ldquo;stanza&rdquo;) &egrave; lo spazio virtuale in cui avviene una conversazione tra due o pi&ugrave utenti iscritti al servizio di chatting.
+				I canali possono differenziarsi per contenuti tematici e lingua usata ed ogni utente pu&ograve; accedervi utilizzando il nome che identifica il canale. 
+			</p>
+
+			<h2>Indice dei contenuti <a name="top"></a></h2>
+
+			<ul>
+				<li><a href="#1">La finestra principale</a></li>
+				<li><a href="#2">Autenticazione di un utente gi&agrave; registrato</a></li>
+				<li><a href="#3">Registrazione di un nuovo utente</a></li>
+				<li><a href="#4">Apertura di un nuovo canale</a></li>
+			</ul>
+
+
+			<h2>La finestra principale <a name="1"></a> <a href="#top">&uarr;</a></h2>
+
+			<p class="example">
+				<img src="doc/multimedia.jpg" alt="messaggi multimediali">	
+			</p>
+
+			<p>
+				Nella prima schermata dell'applicazione possiamo notare, procedendo dall'alto verso il basso,
+				la barra delle schede, il contenitore dei messaggi, la lista degli utenti, la barra degli strumenti,
+				la casella d'inserimento e la barra di stato.
+			</p>
+
+			<p>
+				La <b>barra delle schede</b> contiene le schede dei canali aperti.
+				Ognuna delle schede ha la propria icona di stato <span class="nowrap">(<img class="icon" src="icons/idle.png" alt="icona notifica">)</span>
+				che notifica l'arrivo di nuovi messaggi nel canale iniziando a lampeggiare (<img class="icon" src="icons/news.gif" alt="icona notifica">).<br>
+				E' possibile selezionare uno tra i canali aperti premento sulla scheda ad esso associata,
+				oppure chiuderlo premento sull'icona a forma di croce <span class="nowrap">(<img class="icon" src="icons/close.png" alt="icona chiusura">)</span> visibile al passaggio del mouse.
+			</p>
+
+			<p>
+				Il <b>contenitore dei messaggi</b> e la <b>lista degli utenti</b> mostrano, rispettivamente, i messaggi e i partecipanti
+				del canale selezionato. Nella lista degli utenti, i nomi in corsivo indicano quali utenti sono impegnati a scrivere un messaggio,
+				mentre il nome in grassetto corrisponde a quello dell'utente in uso.				
+			</p>
+
+			<p>
+				La <b>casella d'inserimento</b> &egrave; l'area di testo in cui &egrave; possibile scrivere il nuovo messaggio.
+				Possiamo utilizzare i pulsanti nella <b>barra degli strumenti</b> per inserire formattazioni e smilies all'interno del messaggio;
+				inoltre vengono riconosciuti automaticamente gli indirizzi web e i nomi dei canali (preceduti dal carattere &ldquo;#&rdquo;).<br>
+				Una volta terminato, possiamo inviare il messaggio nel canale premendo semplicemente il tasto &ldquo;invio&rdquo;.<br>
+				<b>Nota:</b> nel caso in cui si voglia scrivere un messaggio su pi&ugrave; righe, &egrave; possibile inserire un ritorno di linea
+				tenendo premuto il tasto &ldquo;shift&rdquo; mentre si digita &ldquo;invio&rdquo;.
+			</p>
+
+			<p>
+				Infine, la <b>barra di stato</b> notifica lo stato della chat e segnala eventuali errori.
+			</p>
+
+
+			<h2>Autenticazione di un utente gi&agrave; registrato <a name="2"></a> <a href="#top">&uarr;</a></h2>
+
+			<p>
+				Se siamo gi&agrave; registrati al servizio di chatting, possiamo aprire la finestra di autenticazione 
+				premendo sull'icona a forma di chiave <span class="nowrap">(<img class="icon" src="icons/signin.png" alt="icona chiave">)</span>
+				alla destra della barra delle schede.
+			</p>
+
+			<p>
+				A questo punto &egrave; sufficiente inserire le credenziali di accesso e premere sul pulsante &ldquo;Accedi&rdquo;.
+			</p>
+
+			<p class="example">
+				<img src="doc/signin.jpg" alt="finestra di autenticazione">	
+			</p>
+
+			<p>
+				Allo stesso modo, quando vorremo terminare la sessione, baster&agrave; premere una seconda volta sull'icona a forma di chiave
+				<span class="nowrap">(<img class="icon" src="icons/signin.png" alt="icona chiave">)</span>, in modo che venga aperta
+				 la relativa finestra di dialogo.
+			</p>
+
+			<p class="example">
+				<img src="doc/signout.jpg" alt="finestra di fine sessione">	
+			</p>
+
+
+			<h2>Registrazione di un nuovo utente <a name="3"></a> <a href="#top">&uarr;</a></h2>
+
+			<p>
+				Per registrare un nuovo utente al servizio di chatting premiamo sull'icona a forma di chiave
+				<span class="nowrap">(<img class="icon" src="icons/signin.png" alt="icona chiave">)</span>
+				come visto nel paragrafo precedente, quindi apriamo la finestra di registrazione premendo sul pulsante
+				&ldquo;Registrati&rdquo;.
+			</p>
+
+			<p class="example">
+				<img src="doc/signup.jpg" alt="finestra di registrazione">	
+			</p>
+
+			<p>
+				I nomi degli utenti devono essere composti da un minimo di 5 caratteri alfanumerici fino ad un massimo di 32 e
+				devono iniziare con una lettera.
+			</p>
+
+			<p>
+				Le password, invece, devono essere composte da un minimo di 4 caratteri fino ad un massimo di 32.
+			</p>
+
+
+			<h2>Apertura di un nuovo canale <a name="4"></a> <a href="#top">&uarr;</a></h2>
+
+			<p>
+				&Egrave; possibile aprire un nuovo canale premento sull'apposito pulsante (<img class="icon" src="icons/add.png" alt="icona nuovo canale">)
+				in alto a destra della finestra.
+			</p>
+
+			<p class="example">
+				<img src="doc/openchannel.jpg" alt="finestra di apertura di un nuovo canale">	
+			</p>
+
+			<p>
+				I nomi dei canali devono essere composti da almeno 3 caratteri minuscoli alfanumerici (pi&ugrave; i caratteri &ldquo;-&rdquo; e &ldquo;_&rdquo;) fino ad un massimo di 16
+				e devono iniziare con una lettera minuscola. Non &egrave; necessario anteporre il cancelletto (#) al nome del canale.
+			</p>
+
+		</div>
+
+	</body>
+
+</html>
