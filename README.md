@@ -30,8 +30,4 @@ Forbidden use of non-standard objects/methods (i.e. `innerHTML`).
 
 ![screenshot](doc/multimedia.jpg)
 
-![screenshot](doc/signup.jpg)
-
-![screenshot](doc/signin.jpg)
-
-![screenshot](doc/signout.jpg)
+You can find the other screenshots in the directory [/doc](doc/).
